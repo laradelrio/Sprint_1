@@ -1,0 +1,160 @@
+
+*{
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    max-width:1200px;
+}
+.parent{
+ display:flex;
+ flex-flow: column nowrap;
+}
+
+.header{
+    background: #000;
+    display: flex;
+    flex-flow:column nowrap;
+}
+    .menu{
+        background: #2d4059 ;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 100px;
+        align-items: center;
+    }
+        .logo {
+            background: #ea5455 ;
+            flex: 1 1 0;
+            height:30px;
+        }
+        .nav{
+            background: #ea5455 ;
+            flex-grow: 5;
+            flex-shrink: 1;
+            flex-basis: auto;
+            height:30px;
+        }
+        .social{
+            background: #ea5455;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: auto;
+            height:30px;
+        }
+    .header-text {
+        background: #f07b3f;
+    }
+        h1{
+            background: #ffd460 ;
+        }
+
+
+.section{
+    background: #000;
+    display: flex;
+}
+    .articles{
+        background: #4e4e6a; 
+        flex-grow: 2;
+        flex-shrink: 1;
+        flex-basis: auto;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+        .article{
+            background: #1f6cb0;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 40%;
+        }
+        .section-text{
+            background: #70a3c4;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 100%;
+        }
+
+    .aside{
+        background: #f73f52 ;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+    }
+        .adds {
+            background: #ffea85  ;
+        }
+
+.footer{
+    background: #000;
+    display:flex;
+    justify-content: center;
+}
+    .copyright{
+        background: #e6af2e ;
+        width:100%;
+    }
+
+
+/* Media Query */
+
+@media all and (max-width: 768px ){
+
+    .section{
+        background: yellow;
+        flex-direction: column;
+    }
+
+}
+
+@media all and (max-width: 480px ){
+    
+    .menu{
+        flex-direction: column;
+        height:fit-content;
+        align-items: stretch;
+    }
+
+        .logo{
+            height:fit-content
+        }
+        .nav{
+            height:fit-content
+        }
+        .social{
+            height:fit-content
+        }
+
+    .section{
+        background: #FEE228;
+        flex-direction: column;
+    }
+
+        .articles {
+            flex-direction: column;
+            background: #09506F;
+        }
+
+            .article{
+                background: #61959C;
+            }
+        
+            .section-text {
+                background: #A3DDCB;
+            }
+
+        .aside{
+            background: #FD7B54 ;
+        }
+
+            .adds{
+                background: #FDB36B;
+            }
+    
+    .footer > .copyright{
+        background: #FDC764 ;
+    }
+}
+    
